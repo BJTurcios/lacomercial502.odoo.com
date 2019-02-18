@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "my_module",
+    'name': "Monto en letras - Reporte Facturas",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        Modulo para convertir el Total a Letras
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "PromitGT",
+    'website': "https://www.promitgt.com/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
@@ -19,17 +19,14 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
-    'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+ 'depends': [
+        'base',
+        'account',
+        'report',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+
+     'data': [
+        'views/res_currency_view.xml',
+        'views/report_invoice.xml',
     ],
 }
